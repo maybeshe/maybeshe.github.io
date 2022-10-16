@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GRLover</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+        <meta name="format-detection" content="telephone=no">
+
+        <link rel="stylesheet" href="https://img3.doubanio.com/f/frodo/77bb3d07f04fb3af5fcc197c76e5e35f97216903/css/lib/normalize.css" type="text/css" media="screen" />
+        
+    <meta name="description" content="GRLover" />
+    <meta name="keywords"  content="GRLover" />
+
+        <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/38e4f94e685ac31b.css">
+    </head>
+    <body>
+        
+    
+    <div id='wrap' style="visibility:hidden;">
+        <section class="section first">
+            <div class="content">
+                <img src="http://asingers.win/images/bg1.001.png" class="cover" />
+                <div class="intro">
+                    <img src="" alt="" data-src="http://asingers.win/images/Jietu20190831-130937.jpg" class="logo">
+                    <div class="info">
+                        <div class="tit"><span>GRLover</span></div>
+                        <div class="con">Ricoh GR Viewer</div>
+                    </div>
+                    <div class="pin">
+                        <img src="http://asingers.win/images/1567228884.png" alt="" />
+                        <p>Scan download GRLover App</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            <section class="section">
+                    <div class="copyright">
+                        <div class="pin">
+                            <img src="http://asingers.win/images/1567228884.png" alt="" />
+                            <p>Scan download GRLover App</p>
+                        </div>
+                        <p>©2019 GRLover, all rights reserved</p>
+                    </div>
+            </section>
+    </div>
+    <div class="returntop"></div>
+
+    </body>
+    
+    <script src="https://img3.doubanio.com/f/frodo/ed9f4b2aaafbe52298952612957ab60162bd4f35/js/lib/jquery/jquery.js"></script>
+    <script src="https://img3.doubanio.com/f/frodo/d04546af345122f2d1a68d7f2efdbe76836304af/js/lib/jquery.fullPage.min.js"></script>
+    <script>
+        $(function(){
+            $('#wrap').fullpage({
+                'anchors':['page1', 'page2', 'page3', 'page4', 'page5'],
+                'navigation': true,
+                'navigationPosition': 'right',
+                'verticalCentered': false,
+                'fitToSection': false,
+                'resize': true,
+                'onLeave': function(index, nextIndex){
+                    if(nextIndex == 1){
+                        $('div.returntop').hide();
+                    }else{
+                        $('div.returntop').show();
+                    }
+                },
+                'afterLoad': function(){
+                    var $img = $('section img');
+                    if($img.attr('src') == ''){
+                        $img.attr('src', $img.attr('data-src'));
+                    }
+                }
+            });
+            $('div.returntop').on('click', function(){
+                $.fn.fullpage.moveTo(1);
+            });
+        });
+        function response(resize) {
+            $('.childpic').css('max-width', window.innerHeight / 823 * 1120)
+            function updateFirstContent() {
+                var $firstContent = $('.section.first .content')
+                var height = $firstContent[0].offsetHeight
+                var width = $firstContent[0].offsetHeight * 10 / 7
+                if (width < window.innerWidth * .8) {
+                    $firstContent.css('width', width)
+                    $firstContent.css('height', '')
+                } else {
+                    width = window.innerWidth * .8
+                    height = width / 10 * 7
+                    $firstContent.css('width', width)
+                    $firstContent.css('height', height)
+                }
+                $('#wrap').css('visibility', 'visible')
+            }
+            if (resize) {
+                setTimeout(updateFirstContent, 1000)
+            } else {
+                updateFirstContent()
+            }
+        }
+
+        response()
+        $(window).on('resize', response)
+    </script>
+</html>
+
+
+
+
+
