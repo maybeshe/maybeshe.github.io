@@ -1,28 +1,43 @@
 ---
-layout: default
+layout: compress
 ---
-<section class="post">
-  <div>
-    <div class="post__header section-padding--double">
-      <div class="grid-small">
-        <h2>{{ page.title }}</h2>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-    {% if page.image %}
-      <div class="post__img">
-        <div>
-          <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
-        </div>
-      </div>
+  {% include head.html %}
+
+  <body class="site">
+
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
     {% endif %}
 
-    <div class="post__content section-padding">
-      <div class="grid">
-        <div id="markdown">
-          {{content}}
-        </div>
+    {% include header.html %}
+
+    <div class="hero--small">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
       </div>
     </div>
-  </div>
-</section>
+    <main class="site__content">
+
+      <div class="container">
+        <div class="page-content">
+
+          {{ content }}
+
+        </div>
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

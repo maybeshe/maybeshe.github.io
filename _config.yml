@@ -1,86 +1,71 @@
-# Site/SEO settings
-email: app@grlover.com
-baseurl: ""
-permalink: /:year/:month/:day/:title/
-google_analytics: 
+# SITE CONFIGURATION
+title: Asingers Studio # your site title
+author: Asingers # You :P
+description: > # Meta description of Homepage
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://grlover.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-name: Asingers
-title: Asingers Studio
-description: >
-  Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
-url: https://grlover.com
-# twitter_username: thomasvaeth
-default_img: /assets/images/seo.jpg
-social:
-  - name: twitter
-    # url: https://twitter.com/thomasvaeth
-  - name: instagram
-    # url: https://www.instagram.com/thomas.vaeth/
-  - name: linkedin
-    # url: https://www.linkedin.com/in/thomasvaeth/
-  - name: github
-    # url: https://github.com/samesies
-  - name: codepen
-    # url: https://codepen.io/thomasvaeth/
+# SEO PLUGIN
+# social:
+#   name: Your Name
+#   links:
+#     - https://twitter.com/BenBalter
+#     - https://www.facebook.com/ben.balter
+#     - https://www.linkedin.com/in/BenBalter
+#     - https://plus.google.com/+BenBalter
+#     - https://github.com/benbalter
+#     - https://keybase.io/benbalter
 
-# Contact settings
-# contact_img: /assets/images/placeholder-28.jpg
-# formcarry: https://formcarry.com/s/HkIo0nMb7
+# THEME SETTINGS
+navigation: # Navigation links
+  - {name: 'Home', link: '/'}
+  - {name: 'About', link: '/about'}
+  - {name: 'Contact', link: '/contact'}
 
-# Disqus settings
-# disqus: test-apkdzgmqhj
+tagline: >
+  Modern Jekyll theme focused on speed performance &amp; SEO best practices
 
-# MailChimp settings
-# mailchimp_action: https://samesies.us17.list-manage.com/subscribe/post-json?u=66ddf555dab480e6a8606430b&amp;id=89b3ee034f
-# mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
+hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
-# Author settings
-author:
-  - name: Asingers
-    bio: ME
-    url: https://grlover.com
+email: app@grlover.com # email for form submission
 
-# Pagination settings
-pagination:
-  enabled: true
-  debug: false
-  per_page: 12
-  permalink: '/page/:num/'
-  title: ':title'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-autopages:
-  enabled: true
-  categories:
-    enabled: false
-  collections:
-    enabled: false
-  tags:
-    layouts: 
-      - 'tag.html'
-    title: 'The Barber Theme'
-    permalink: '/tag/:tag'
-    slugify:
-      mode: raw
-      cased: true
+# twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
+# github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
+# instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
 
-# Build settings
+# disqus:
+  # shortname: janczizikow # to enable comments replace with your_disqus_shortname
+
+# google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
+
+service_worker: true
+
+# BUILD SETTINGS
 markdown: kramdown
-plugins:
-  - jekyll-paginate-v2
-  - jekyll-sitemap
-compress_html:
-  clippings: all
-  comments: all
-  startings: [html, head, body]
+highlighter: rouge # or pygments or null
+# theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
+  - README.md
   - node_modules
-  - .DS_Store
-  - barber.jpg
+  - script
+  - package.json
+  - package-lock.json
   - Gemfile
   - Gemfile.lock
-  - gulpfile.js
-  - package.json
-  - README.md
   - vendor
+  - npm-debug.log
+  - gulpfile.js
+  - sleek.jpg
+
+include: ['_pages']
+permalink: /:title/
+
+compress_html:
+  clippings: all
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

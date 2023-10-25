@@ -1,231 +1,193 @@
-# Barber
-Barber is a minimal blog theme built for Jekyll. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈 Barber is also available for [Ghost](https://github.com/samesies/barber-ghost).
+# Sleek
 
-![Barber](https://raw.githubusercontent.com/samesies/barber-jekyll/master/barber.jpg "Barber")
+[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek) [![Build Status](https://travis-ci.org/janczizikow/sleek.svg?branch=master)](https://travis-ci.org/janczizikow/sleek) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/janczizikow/sleek)
 
-## Initial Setup
-* [Installation](#installation)
-* [Update Settings](#update-settings)
-* [Create Posts](#create-posts)
-* [Create Pages](#create-pages)
-* [Create Navigation](#create-navigation)
+A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
 
-## Customization
-* [Contact Form](#contact-form)
-* [Social Media Links](#social-media-links)
-* [Disqus Comments](#disqus-comments)
+> ⚠️ This theme is no longer actively maintained.
 
-## Additional Development
-* [Deployment](#deployment)
-* [Source Code](#source-code)
-* [Donations](#donations)
-* [Support](#support)
+![Sleek Jekyll Theme](./sleek.jpg)
 
-### Installation
-Jekyll requires all dependencies to be saved in the ````Gemfile````. Run ````bundle install```` (Install [Bundler](http://bundler.io/) if it is not already) on your command line after downloading or cloning the theme. You can then run ````bundle exec jekyll serve```` or ````npm start```` to see your development site. Run ````bundle exec jekyll build```` or ````npm run build```` to build a production ready site for deployment.
+## Features
 
-### Update Settings
-Almost everything to personalize your site is in the ````_config.yml````. 
+* Compatible with [Github Pages](https://pages.github.com/)
+* Minimal, responsive and speed performance optimized
+* SEO friendly, with help of [Jekyll SEO Plugin](https://github.com/jekyll/jekyll-seo-tag)
+* Easy [Google Tag Manager](https://tagmanager.google.com/) Integration
+* Support for [Disqus](https://disqus.com/) comments
+* Form submissions with [Formspree](#formspree)
 
-```
-# Site/SEO settings
-email: okay@samesies.io
-baseurl: ""
-permalink: /:year/:month/:day/:title/
-google_analytics: 
+[Preview Demo](https://janczizikow.github.io/sleek/)
 
-name: Thomas Vaeth
-title: The Barber Theme
-description: >
-  Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
-url: http://barber.samesies.io
-twitter_username: thomasvaeth
-default_img: /assets/images/seo.jpg
-social:
-  - name: twitter
-    url: https://twitter.com/thomasvaeth
-  - name: instagram
-    url: https://www.instagram.com/thomas.vaeth/
-  - name: linkedin
-    url: https://www.linkedin.com/in/thomasvaeth/
-  - name: github
-    url: https://github.com/samesies
-  - name: codepen
-    url: https://codepen.io/thomasvaeth/
+## Installation
 
-# Contact settings
-contact_img: /assets/images/placeholder-28.jpg
-formcarry: https://formcarry.com/s/HkIo0nMb7
+### System Requirements
 
-# Disqus settings
-disqus: test-apkdzgmqhj
+To use this project, you'll need the following things on your local machine:
 
-# MailChimp settings
-mailchimp_action: https://samesies.us17.list-manage.com/subscribe/post-json?u=66ddf555dab480e6a8606430b&amp;id=89b3ee034f
-mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
+#### Jekyll
 
-# Author settings
-author:
-  - name: Thomas Vaeth
-    bio: Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.
-    url: http://thomasvaeth.com
-
-# Pagination settings
-pagination:
-  enabled: true
-  debug: false
-  per_page: 12
-  permalink: '/page/:num/'
-  title: ':title'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-autopages:
-  enabled: true
-  categories:
-    enabled: false
-  collections:
-    enabled: false
-  tags:
-    layouts: 
-      - 'tag.html'
-    title: 'The Barber Theme'
-    permalink: '/tag/:tag'
-    slugify:
-      mode: raw
-      cased: true
+```shell
+gem install jekyll
 ```
 
-You can change the URL the [contact form](#contact-form) is sent to, add Google Analytics, change the SEO settings, grow your website with additional authors, and much more.
+#### NodeJS (8 or greater)
 
-### Create Posts
-All posts go upder the ````_posts```` directory. You can also have a ````_drafts```` directory with posts that will on your development page, but not in production.
+Download and open the [NodeJS installer](https://nodejs.org/en/)
 
-```
----
-layout: post
-title: "Brunch Swag"
-date: 2017-02-18
-description: 
-image: /assets/images/placeholder-15.jpg
-author: Thomas Vaeth
-tags: 
-  - XOXO
-  - La Croix
----
+#### Gulp CLI (optional, but recommended)
+
+```shell
+npm install --global gulp-cli
 ```
 
-The front matter has to have a layout of page. All the other fields are completely optional. If you have an ````author```` variable, then it must match an author's name in ````_config.yml```` (see [Update Settings](#update-settings)). The ````tag```` variable will add a related section to the post and popular tags to the footer.
+### Up & Running
 
-### Create Pages
-Creating a static page is the same as creating a post. The only difference is a page is in the root of the directory rather than the ````_posts```` directory.
+1. [Fork the repo](https://github.com/janczizikow/sleek/fork)
+2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
+3. Inside the directory run `bundle install` and `npm install`
+4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
+    * if you don't want to use gulp you can run `bundle exec jekyll serve` instead
 
+#### Installing to existing jekyll project
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "jekyll-sleek"
 ```
----
-layout: page
-title: Style Guide
-image: /assets/images/placeholder-18.jpg
----
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: jekyll-sleek
 ```
 
-You just have to make sure the front matter has a layout of page instead of post. If there is no title or image, then the page will default to the site configuration.
+And then execute:
 
-### Create Navigation
-You can create a navigation in ````_includes/navigation.html````. Visitors can be linked directly to pages right on the top of your website.
+    $ bundle
 
-***
+Or install it yourself as:
 
-### Contact Form
-The form uses [Formcarry](https://formcarry.com/) to send submitted messages straight to your inbox. The image on the popup is the the ````contact_img```` variable and the URL the forms sends to is the ````formcarry```` variable in ````_config.yml```` (see [Update Settings](#update-settings)).
+    $ gem install jekyll-sleek
 
-![Contact Form](http://samesies.io/assets/images/barber/doc/framed-contact-form.jpg "Contact Form")
+## File Structure Overview
 
-This file can be found in ````_includes/formscarry.html````. You can change the labels of the form here. After everything is set you will need to submit a message to yourself to confirm everything is correct.
-
-### Social Media Links
-[Font Awesome](http://fontawesome.io/) is used for the social media icons. The icons in the theme can be found in ````_includes/share.html```` and ````_includes/social.html````. The icons in ````_includes/share.html```` do not need to be edited unless you want to remove a certain website; however, the ones in ````_includes/social.html```` do have to be changed. You can follow the example that has been provided in ````_config.yml```` for you to link to all of your social media accounts  (see [Update Settings](#update-settings)). The naming convention has not changed from the instructions provided on Font Awesome.
-
-### Disqus Comments
-Comments can be enabled on every blog post in a few steps steps. The first step is to register your website with [Disqus](https://disqus.com/). Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to replace the ````disqus```` variable in ````_config.yml```` (see [Update Settings](#update-settings)). The third step is to open ````_includes/disqus.html```` and remove all the instructions. The final step is to visit a blog post and verify that your comments are there.
-
-***
-
-### Deployment
-GitHub Pages [does not support]((https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/)) custom plugins. The tag list and tag pagination are built using custom plugins. There are several options to avoid any errors while deploying to production.
-* Run ````bundle exec jekyll build```` or ````npm run build```` and manually add the contents of the ```_site``` folder to the ```gh-pages``` branch.
-* Link the repository to [Netlify](https://www.netlify.com/). Netlify will then rebuild the theme every time a commit is pushed to the repo.
-* Finish setting up the [s3-website](https://github.com/klaemo/s3-website) package that is already included in the theme. This would deploy the theme to AWS S3 when ```npm run deploy``` is run.
-
-### Source Code
-The source code is broken down to make finding what you need as easy as possible. Almost everything runs through ````gulpfile.js````, so you will need to run ````npm install```` on your command line before doing any additional development. You can then run ````gulp```` or ````npm run gulp```` to compile everything.
-
-```
-.
-├── _assets
-|   ├── js
-|       ├── components
-|       ├── vendor
-|       ├── _inits.js
-|       └── app.js
-|   └── scss
-|       ├── base
-|       ├── components
-|       ├── fonts
-|       ├── regions
-|       ├── tools
-|       ├── utils
-|       ├── vendor
-|       └── app.scss
-├── _includes
-|   ├── contact.html
-|   ├── disqus.html
-|   ├── footer.html
-|   ├── formcarry.html
-|   ├── head.html
-|   ├── header.html
-|   ├── navigation.html
-|   ├── pagination.html
-|   ├── post-card.html
-|   ├── share.html
-|   ├── social.html
-|   └── subscribe_form.html
-├── _layouts
-|   ├── compress.html
-|   ├── default.html
-|   ├── page.html
-|   ├── post.html
-|   └── tag.html
-├── _plugins
-├── _posts
-├── _site
+```bash
+sleek
+├── _includes	               # theme includes
+├── _js	                       # javascript files (by default jquery will be included with the scripts inside)
+├── _layouts                   # theme layouts (see below for details)
+├── _pages                     # pages folder (empty by default)
+├── _posts                     # blog posts
+├── _sass                      # Sass partials
 ├── assets
-|   ├── css
-|   ├── images
-|   ├── js
-├── .eslintrc
-├── .gitignore
-├── .stylelintrc
-├── 404.html
-├── _config.yml
-├── Gemfile
-├── Gemfile.lock
-├── gulpfile.js
-├── index.html
-├── package.json
-├── README.md
-├── style-guidle.html
-└── subscribe.html
+|  ├── css	               # minified css files
+|  ├── img                     # images and icons used for the template
+|  └── js		               # bundled and minified files from _js folder
+├── _config.yml                # sample configuration
+├── gulpfile.js                # gulp tasks (tasks autorunner)
+├── index.md                   # sample home page (blog page)
+└── package.json               # gulp tasks
 ```
 
-The CSS is written in Sass. The JavaScript is written in ES6, so your code is up to date with the newest standards.
+## Usage
 
-### Donations
-Barber has been released for free. Similar themes cost around $29 on [ThemeForest](https://themeforest.net/category/static-site-generators/jekyll). Any donations would be greatly appreciated after the work that went into releasing Barber.
+You can modify the theme by changing the settings in `_config.yml`.
 
-* PayPal – <https://www.paypal.me/samesies>
-* Bitcoin – 1PSzNmcfAFJY1PtBK5u9R5bTGfF7KAuLcq
-* Ethereum – 0x392F7116e4171F1D740397B6000EadD2e4bb9670
-* Litecoin – LSH9AnjcUTV5T7PUxXQuxPqb9W5aSR9GEP
+### Posts
 
-### Support
-Email <okay@samesies.io> if you need any additional support with Barber.
+Create a new Markdown file such as 2017-01-13-my-post.md in _post folder. Configure YAML Front Matter (stuff between `---`):
+
+```yaml
+---
+layout: post # needs to be post
+title: Getting Started with Sleek # title of your post
+featured-img: sleek #optional - if you want you can include hero image
+---
+```
+
+#### Images
+
+In case you want to add a hero image to the post, apart from changing featured-img in YAML, you also need to add the image file to the project. To do so, just upload an image in .jpg format to `_img` folder. The name must before the .jpg file extension has to match with featured-img in YAML. Next, run `gulp img` from command line to generate optimized version of the image and all the thumbnails. You have to restart the jekyll server to see the changes.
+
+Sleek uses [Lazy Sizes](https://github.com/aFarkas/lazysizes). Lazy Loader for loading images. Check the link for more info. Lazy Sizes doesnt’t require any configuration and it’s going to be included in your bundled js file.
+
+### Pages
+
+The home page is located under index.md file. To change the content or design you have to edit the default.html file in `_layouts` folder.
+
+In order to add a new page, create a new html or markdown file under root directory or inside _pages folder. To add a link in navigation add it in `_config.yml`:
+
+```yaml
+# THEME SETTINGS
+navigation: # Navigation links
+  - {name: 'Home', link: '/'}
+  - {name: 'About', link: '/about'}
+  - {name: 'Contact', link: '/contact'}
+```
+
+`name` is the text that will be shown and link, well, it's a link.
+
+### Site configuration
+
+Sleek comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md) to know how to set it up.
+
+Additionally, in `_config.yml` you can find custom theme settings under `# THEME SETTINGS` comment. Here's a brief overview of those custom settings:
+
+- `navigation` - collection of links that will be shown in the header
+- `tagline` - text that will be displayed on the homepage under the heading.
+- `hero_img` - background image of the homepage hero section
+
+Other settings usually enable/disable certain feature, and are discussed with the next sections.
+
+### Google Tag Manager
+
+To enable Google Tag Manager, add the uncomment the following line in `_config.yml`:
+
+```yaml
+google_tag_manager: GTM-XXXXXXX
+```
+
+Replace `GTM-XXXXXXX` with your Google Tag Manager Container ID.
+
+**Note** by default GTM tracking snippet will be also included in development environment.
+
+Google Tag Manager was chosen for this project as it's more flexible than Google Analytics, and it can be used to add GA to your site.
+
+### Disqus
+
+To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to `_config.yml`:
+
+```yaml
+disqus:
+  shortname: my_disqus_shortname
+```
+
+### Formspree
+
+To use [Formspree](https://formspree.io/) with your email address, you need to change the following:
+
+Change `your-email@domain.com` email in `_config.yml`
+
+```yaml
+email: your-email@domain.com
+```
+
+You can check if it works by simply submitting the form.
+
+If you have a Formspree Gold Account, you can take advantage of using AJAX to submit form. To do so, uncomment last function in `_js/scripts.js` and run `gulp js`. Now the form will be submitted asynchronously, without leaving the page.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at [https://github.com/janczizikow/sleek](https://github.com/janczizikow/sleek). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install` and `npm install`.
+
+The theme is setup just like a normal Jekyll site! Check out [file structure overview](#file-structure-overview) for details. To test the theme, run `gulp` and open your browser at `http://localhost:3000`. This starts a Jekyll server using the theme. Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications to the theme and to the content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
