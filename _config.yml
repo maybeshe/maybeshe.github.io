@@ -5,6 +5,7 @@ description: > # Meta description of Homepage
   gr,grlover,ricoh gr
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://grlover.com" # the base hostname & protocol for your site, e.g. http://example.com
+lang: zh-CN
 
 # SEO PLUGIN
 # social:
