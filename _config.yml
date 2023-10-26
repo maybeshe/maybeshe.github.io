@@ -27,7 +27,7 @@ navigation: # Navigation links
 tagline: >
   愿美好与你我同在。
 
-hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+hero_img: posts/IMG_1027.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 email: app@grlover.com # email for form submission
 
