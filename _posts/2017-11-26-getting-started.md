@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Sleek
-featured-img: "https://images.unsplash.com/photo-1697162735193-13521492a672?auto=format&fit=crop&q=80&w=2748&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+featured-img: "photo-1671067039708-6e192b9811aa.jpeg"
 mathjax: true
 ---
 
