@@ -8,15 +8,15 @@ url: "https://grlover.com" # the base hostname & protocol for your site, e.g. ht
 lang: zh-CN
 
 # SEO PLUGIN
-# social:
-#   name: Your Name
-#   links:
-#     - https://twitter.com/BenBalter
-#     - https://www.facebook.com/ben.balter
-#     - https://www.linkedin.com/in/BenBalter
-#     - https://plus.google.com/+BenBalter
-#     - https://github.com/benbalter
-#     - https://keybase.io/benbalter
+social:
+  name: Your Name
+  links:
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
 
 # THEME SETTINGS
 navigation: # Navigation links
