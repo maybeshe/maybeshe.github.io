@@ -20,9 +20,9 @@ lang: zh-CN
 
 # THEME SETTINGS
 navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
+  - {name: '首页', link: '/'}
+  - {name: '关于', link: '/about'}
+  - {name: '联系', link: '/contact'}
 
 tagline: >
   愿美好与你我同在。
