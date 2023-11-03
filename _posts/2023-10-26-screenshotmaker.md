@@ -2,7 +2,7 @@
 layout: post
 title: ScreenShot Maker
 featured-img: "screenshotmaker_bg_01.jpeg"
-categories: [App]
+categories: [App,Screenshot]
 summary: 截图套壳 App
 ---
 
