@@ -6,7 +6,7 @@ categories: [App, Unsplash]
 summary: 摄影图片 App
 ---
 
-![Available on iPhone, iPad, Mac](https://grlover.com/assets/img/posts/unsplash_bg_img02.jpg)
+![Available on iPhone, iPad, Mac](https://grlover.com/assets/img/posts/unsplash_bg_img02.jpeg)
 
 [![Available on iPhone, iPad, Mac](https://grlover.com/assets/img/posts/download_btn.jpg)](https://apps.apple.com/cn/app/sparks-unsplash-可商用墙纸库/id1440362143)
 

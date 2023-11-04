@@ -6,7 +6,7 @@ categories: [App, NFC]
 summary: NFC数据读取 App
 ---
 
-![Available on iPhone](https://grlover.com/assets/img/posts/NFCCommander_bg_02.jpg)
+![Available on iPhone](https://grlover.com/assets/img/posts/NFCCommander_bg_02.jpeg)
 
 [![Available on iPhone](https://grlover.com/assets/img/posts/download_btn.jpg)](https://apps.apple.com/cn/app/nfc-commander-reader-writer/id1557108618)
 
